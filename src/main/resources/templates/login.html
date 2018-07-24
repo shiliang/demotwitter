@@ -6,7 +6,7 @@
 <body th:background="@{/image/twitter-logo.png}">
 
 <!--/* This code will be removed at Thymeleaf parsing time! */-->
-<form action="#" th:action="@{/login}" th:object="${userInfo}" method="post">
+<form action="#" th:action="@{/userlogin}" th:object="${userInfo}" method="post">
     <input type="text" th:field="*{username}" />
     <input type="text" th:field="*{password}" />
     <input type="submit"/>

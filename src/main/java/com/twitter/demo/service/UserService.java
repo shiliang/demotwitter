@@ -7,17 +7,19 @@ package com.twitter.demo.service;/*
 
 import com.twitter.demo.model.User;
 
-import java.util.List;
+import java.util.Map;
+
 
 public interface UserService {
-    public List<User> getUserList();
 
-    public User findUserById(long id);
 
-    public void save(User user);
 
-    public void edit(User user);
+    public Map<String, Object> register(String username, String password);
 
-    public void delete(long id);
+    public Map<String, Object> login(String username, String password);
+
+    public User getUser(int id);
+
+    public void logout(String ticket);
 
 }

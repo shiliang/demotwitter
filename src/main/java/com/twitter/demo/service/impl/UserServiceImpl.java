@@ -6,41 +6,39 @@ package com.twitter.demo.service.impl;/*
  * */
 
 import com.twitter.demo.model.User;
-import com.twitter.demo.repository.UserRepository;
 import com.twitter.demo.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private UserRepository userRepository;
 
+
+    /**
+     * @Description: 用户注册
+     * @Param: 用户名，密码
+     * @Return: 注册信息，如果注册成功map为空
+     * @Author: shiliang
+     * @Date: 2018/7/23
+     */
     @Override
-    public List<User> getUserList() {
-        return userRepository.findAll();
+    public Map<String, Object> register(String username, String password) {
+        return null;
     }
 
     @Override
-    public User findUserById(long id) {
-        return userRepository.findById(id);
+    public Map<String, Object> login(String username, String password) {
+        return null;
     }
 
     @Override
-    public void save(User user) {
-        userRepository.save(user);
+    public User getUser(int id) {
+        return null;
     }
 
     @Override
-    public void edit(User user) {
-        userRepository.save(user);
-    }
+    public void logout(String ticket) {
 
-    @Override
-    public void delete(long id) {
-        userRepository.deleteById(id);
     }
-
 }
